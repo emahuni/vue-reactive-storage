@@ -5,7 +5,7 @@ const makeWatchers = (storage, dataKey) => Object.keys(storage).reduce((acc, key
   // allow .bind
   const handler = function handler (value) {
     store.set(key, value)
-    console.log(`${vueKey} watcher executed...`)
+    // console.log(`${vueKey} watcher executed...`)
   }
 
   return Object.assign({ [vueKey]: { handler } }, acc)
