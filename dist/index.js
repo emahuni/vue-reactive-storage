@@ -16,9 +16,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-/******/
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -93,7 +93,7 @@ var makeWatchers = function (storage, dataKey) { return Object.keys(storage).red
   // allow .bind
   var handler = function handler (value) {
     store.set(key, value)
-    console.log((vueKey + " watcher executed..."))
+    // console.log(`${vueKey} watcher executed...`)
   }
 
   return Object.assign(( obj = {}, obj[vueKey] = { handler: handler }, obj ), acc)
